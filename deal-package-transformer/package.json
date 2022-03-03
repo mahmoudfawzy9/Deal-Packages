@@ -1,0 +1,20 @@
+{
+  "name": "deal-package-transformer",
+  "version": "1.0.0",
+  "description": "This package transforms the data object as needed",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "deal",
+    "transform",
+    "transformer"
+  ],
+  "author": "DEAL",
+  "license": "ISC",
+  "dependencies": {
+    "camelcase-keys": "^6.2.2"
+  }
+}

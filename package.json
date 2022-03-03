@@ -1,0 +1,61 @@
+{
+  "name": "deal-be-story-service",
+  "version": "1.0.0",
+  "description": "DEAL backend article service",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "build": "webpack --entry ./server --output-filename bundle.min.js --output-path ./app/public/js ",
+    "start": "npx nodemon --exec babel-node server.js",
+    "sequelize-skeleton": "npx sequelize init:models; npx sequelize init:config"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.deal.com:deal/deal-be-article-service.git"
+  },
+  "keywords": [
+    "deal",
+    "story",
+    "service"
+  ],
+  "author": "DEAL",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "camelcase-keys": "^6.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "fd-diskspace": "^1.0.0",
+    "http-as-promised": "^2.0.1",
+    "jest": "^26.4.2",
+    "deal-package-actuator": "git+ssh://git@gitlab.deal.com:deal/deal-package-actuator.git",
+    "deal-package-query-builder": "git+ssh://git@gitlab.deal.com:deal/deal-package-query-builder.git",
+    "deal-package-transformer": "git+ssh://git@gitlab.deal.com:deal/deal-package-transformer.git",
+    "deal-package-validator": "git+ssh://git@gitlab.deal.com:deal/deal-package-validator.git",
+    "mysql2": "^2.2.5",
+    "regenerator-runtime": "^0.13.7",
+    "sequelize": "^6.5.0",
+    "sequelize-auto": "^0.6.2",
+    "supertest": "^5.0.0",
+    "swagger-tools": "^0.10.4",
+    "swagger-ui-express": "^4.1.4"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.13.0",
+    "@babel/preset-env": "7.1.0",
+    "axios": "^0.21.1",
+    "babel-cli": "^7.0.0-0",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "faker": "^5.4.0",
+    "form-data": "^4.0.0",
+    "lodash.random": "^3.2.0",
+    "lodash.times": "^4.3.2",
+    "nodemon": "^2.0.4",
+    "sequelize-cli": "^6.2.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}

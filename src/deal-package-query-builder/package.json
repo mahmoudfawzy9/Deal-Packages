@@ -1,0 +1,24 @@
+{
+  "name": "deal-package-query-builder",
+  "version": "1.0.0",
+  "description": "This package handles pagination, sorting, filters, only and with query parametes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "sequlize",
+    "pagination",
+    "paginate",
+    "sorting",
+    "sort",
+    "filter",
+    "only",
+    "with",
+    "query",
+    "parameters"
+  ],
+  "author": "DEAL",
+  "license": "ISC"
+}

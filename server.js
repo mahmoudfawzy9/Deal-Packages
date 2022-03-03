@@ -1,13 +1,12 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const cors = require("cors");
+const express = require('express')
+const cors = require('cors')
 
-require("dotenv").config();
+require('dotenv').config()
 
-const swaggerUi = require('swagger-ui-express'),
-    swaggerDocument = require('./swagger.js');
+const app = express()
 
-const app = express();
+const swaggerUi = require('swagger-ui-express')
+const swaggerDocument = require('./swagger.js')
 
 let port = process.env.PORT,
     baseUrl = process.env.BASE_URL,
@@ -15,7 +14,7 @@ let port = process.env.PORT,
     adminUrl = process.env.ADMIN_URL ? process.env.ADMIN_URL : "http://localhost:9000";
 
 const actuator = require("kidstar-package-actuator")({
-    appName: "kidstar-be-story-service",
+    appName: "kidstar-be-author-service",
     baseUrl: `${protocol}://${baseUrl}:${port}`,
     managementUrl: "/actuator",
     adminUrl: adminUrl,
@@ -30,23 +29,17 @@ app.use("/actuator", actuator)
 
 app.use(cors({
     origin: '*'
-}));
+}))
 
 // parse requests of content-type - application/json
-app.use(bodyParser.json());
-
+app.use(express.json())
 // parse requests of content-type - application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }))
 
-// simple route
-app.get("/", (req, res) => {
-    res.json({ message: "Story Service" });
-});
+require('./src/routes/routes')(app)
 
-require("./src/routes/routes")(app);
-
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
 app.listen(port, () =>
-    console.log(`🚀 Server ready at ${baseUrl}:${port}`)
-);
+    console.log(`🚀 Server ready at ${baseUrl}:${port}   `)
+)

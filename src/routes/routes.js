@@ -1,6 +1,6 @@
+const {Router} = require('express')
+const  authorRoutes = require('./authorRoutes')
 
 module.exports = app => {
-    require("./article.routes")(app, require("express").Router());
-    require("./book_category.routes")(app, require("express").Router());
-    require("./artifact.routes")(app, require("express").Router());
+    authorRoutes(app, Router())
 }

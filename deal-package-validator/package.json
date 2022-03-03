@@ -1,0 +1,21 @@
+{
+  "name": "deal-package-validator",
+  "version": "1.1.0",
+  "description": "This package will take your data and validator objects and will validate it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "npm",
+    "validate",
+    "validator"
+  ],
+  "author": "DEAL",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}

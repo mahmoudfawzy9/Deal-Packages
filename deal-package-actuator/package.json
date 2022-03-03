@@ -1,0 +1,24 @@
+{
+  "name": "deal-package-actuator",
+  "version": "1.0.0",
+  "description": "A express-actuator alternative",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DEAL",
+  "keywords": [
+    "node",
+    "actuator",
+    "spring",
+    "springboot",
+    "metrics"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fd-diskspace": "^1.0.0",
+    "http-as-promised": "^2.0.1",
+    "lodash": "^4.17.20"
+  }
+}
